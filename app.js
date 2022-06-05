@@ -199,24 +199,38 @@
 
 //---------------blind practice--->
 
-var Rect = function (height,width) {
+// var Rect = function (height,width) {
     
-    this.height = height;
-    this.width = width;
+//     this.height = height;
+//     this.width = width;
 
-    this.draw = function () {
-        console.log('draw function');
+//     this.draw = function () {
+//         console.log('draw function');
 
-        this.otherFunction()
+//         this.otherFunction()
         
-    }
+//     }
 
-    this.otherFunction = function () {
-        console.log(this.height + 'I am height');
-        console.log(this.width + 'I am width');
+//     this.otherFunction = function () {
+//         console.log(this.height + 'I am height');
+//         console.log(this.width + 'I am width');
         
-    }
-}
+//     }
+// }
 
-var rect2 = new Rect(5,6);
-rect2.draw()
+// var rect2 = new Rect(5,6);
+// rect2.draw()
+
+
+//====================constructor String
+
+// var str = new String('str')
+// console.log(' my string is '+str); //Nothing change in string
+
+
+
+
+
+
+// ================Function is a Object===============//
+//   object oriented programming is awesome,
