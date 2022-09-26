@@ -1,6 +1,9 @@
 //==============Object literal =================//
 
 
+
+
+
 // var react = {
 //     height: 30,
 //     width: 60,
@@ -14,7 +17,7 @@
 // react.func();
 // react.height = 50;
 // react.func()
-//---------practice
+// ---------practice
 // var react = {
 
 //     color: 'red',
@@ -30,24 +33,24 @@
 
 //---------practice --->
 
-// var obj = {
-//     height: 30,
-//     width: 20,
-//     func: function () {
-//         console.log('I am a Method');
-//         console.log(this.height + ' i am from this method');
-//         console.log(this.width + ' i am from this method');
-//     }
-// }
-// obj.func();
+var obj = {
+    height: 30,
+    width: 20,
+    func: function () {
+        console.log('I am a Method');
+        console.log(this.height + ' i am from this method');
+        console.log(this.width + ' i am from this method');
+    }
+}
+obj.func();
 
-// console.log(obj.height + ' is a height');
-// console.log(obj.width + ' is a width');
+console.log(obj.height + ' is a height');
+console.log(obj.width + ' is a width');
 
-// obj.height = 100;
-// obj.func()
+obj.height = 100;
+obj.func()
 
-// console.log(obj.height);
+console.log(obj.height);
 
 
 
@@ -74,55 +77,55 @@
 
 
 
-// function myFunction() {
-//     console.log(this); //--> this is mention window function
+function myFunction() {
+    console.log(this); //--> this is mention window function
     
-// }
-// myFunction()
+}
+myFunction()
 
 
-// function myFunction() {
-//     console.log(this); //--> this is window object
+function myFunction() {
+    console.log(this); //--> this is window object
     
-// }
-//  new myFunction()  //---> this is empty object
+}
+ new myFunction()  //---> this is empty object
 
 
 
 
 //---------practice --->
 
-// var obj = {
+var obj = {
 
-//     height: 30,
-//     width: 20,
+    height: 30,
+    width: 20,
 
 
-//     func: function () {
-//         console.log('I am a Method');
-//         this.printProperties()
+    func: function () {
+        console.log('I am a Method');
+        this.printProperties()
         
-//     },
+    },
 
 
-//     printProperties: function () {
-//         console.log(this.height + ' i am from this method');
-//         console.log(this.width + ' i am from this method');
-//     }
-// }
+    printProperties: function () {
+        console.log(this.height + ' i am from this method');
+        console.log(this.width + ' i am from this method');
+    }
+}
 
-// obj.func();
+obj.func();
 
-// var news = {
-//     height: 100,
-//     width: 200,
+var news = {
+    height: 100,
+    width: 200,
 
-//     methods: function () {
-//         console.log(this);
+    methods: function () {
+        console.log(this);
         
-//     }
-// }
-// news.methods()
+    }
+}
+news.methods()
 
 
 
@@ -132,36 +135,36 @@
 
 
 //============Factory or Class Pattern ==============//
-// var createRect = function(height, width) {
-//     return {
+var createRect = function(height, width) {
+    return {
 
-//         height: height,
-//         width: width,
+        height: height,
+        width: width,
     
     
-//         draw: function () {
-//             console.log('I am a Method');
-//             this.printProperties()
-//             console.log(this);
+        draw: function () {
+            console.log('I am a Method');
+            this.printProperties()
+            console.log(this);
             
-//         },
+        },
     
     
-//         printProperties: function () {
-//             console.log(this.height + ' i am height');
-//             console.log(this.width + ' i am width');
-//             // console.log(this);
+        printProperties: function () {
+            console.log(this.height + ' i am height');
+            console.log(this.width + ' i am width');
+            // console.log(this);
 
-//         }
-//     }
+        }
+    }
     
-// }
+}
 
-// var rect1 = createRect(1,2);
-// rect1.draw();
+var rect1 = createRect(1,2);
+rect1.draw();
 
-// var rect2 = createRect(5,6)
-// rect2.draw()
+var rect2 = createRect(5,6)
+rect2.draw()
 
 
 
@@ -170,62 +173,62 @@
 
 
 //===============Constructor Pattern==================//
-// var Rectangle = function (height,width) {
+var Rectangle = function (height,width) {
     
-//         this.height= height
-//         this.width = width
+        this.height= height
+        this.width = width
     
     
-//         this.draw = function () {
-//             console.log('I am a Method');
-//             this.printProperties()
-//             console.log(this);
+        this.draw = function () {
+            console.log('I am a Method');
+            this.printProperties()
+            console.log(this);
             
-//         }
+        }
     
     
-//         this.printProperties = function () {
-//             console.log(this.height + ' i am height');
-//             console.log(this.width + ' i am width');
+        this.printProperties = function () {
+            console.log(this.height + ' i am height');
+            console.log(this.width + ' i am width');
 
-//         }
+        }
     
-// }
+}
     
-// var rect2 = new Rectangle(1,2)
+var rect2 = new Rectangle(1,2)
 
-// rect2.draw()
+rect2.draw()
 
 
 //---------------blind practice--->
 
-// var Rect = function (height,width) {
+var Rect = function (height,width) {
     
-//     this.height = height;
-//     this.width = width;
+    this.height = height;
+    this.width = width;
 
-//     this.draw = function () {
-//         console.log('draw function');
+    this.draw = function () {
+        console.log('draw function');
 
-//         this.otherFunction()
+        this.otherFunction()
         
-//     }
+    }
 
-//     this.otherFunction = function () {
-//         console.log(this.height + 'I am height');
-//         console.log(this.width + 'I am width');
+    this.otherFunction = function () {
+        console.log(this.height + 'I am height');
+        console.log(this.width + 'I am width');
         
-//     }
-// }
+    }
+}
 
-// var rect2 = new Rect(5,6);
-// rect2.draw()
+var rect2 = new Rect(5,6);
+rect2.draw()
 
 
 //====================constructor String
 
-// var str = new String('str')
-// console.log(' my string is '+str); //Nothing change in string
+var str = new String('str')
+console.log(' my string is '+str); //Nothing change in string
 
 
 
