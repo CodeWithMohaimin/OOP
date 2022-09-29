@@ -60,7 +60,6 @@ students[index] = {
 
 console.log(students);
 
-
 // ---------------- 3. Delete Data -------------->
 
 
