@@ -7,7 +7,11 @@ function uid() {
 }
 
 /**
- * 1. Easily Traverse
+ * 1. Easily Traverse/
+        *Imperative way = for loop, in loop, of loop, while loop, do while
+        
+        * Declarative way = forEach, map, filter, every, reduce, some, findIndex
+
  * 2. Filter
  * 3. Delete -------> [ splice -> o(n),,  filter -> o(n) ]
  * 4. Update Data -------> Medium [ findIndex  o(n) ]
@@ -58,12 +62,33 @@ students[index] = {
     ...updateData,
 }
 
-console.log(students);
+//console.log('Updating',students);
 
 // ---------------- 3. Delete Data -------------->
+// splice , filter
+
+
+// students.splice(index, 1)
+// console.log('Deleting',students);
+
+
+//------------- 4. Array Traverse ------------>
+// imperative way = for loop, in loop, of loop, while loop, do while
+
+// Declarative way = forEach, map, filter, every, reduce, some, findIndex
 
 
 
+// for (i = 0; i < students.length; i++){
+//     console.log(students[i].email)
+// }
 
-console.log(students);
 
+// for (let i in students) {
+//     console.log(students[i].id);
+// }
+
+
+// for (let student of students) {
+//     console.log(student.email);
+// }
